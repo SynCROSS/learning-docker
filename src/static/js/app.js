@@ -13,7 +13,6 @@ function App() {
 
 function TodoListCard() {
   const [items, setItems] = React.useState(null);
-
   React.useEffect(() => {
     fetch('/items')
       .then(r => r.json())
@@ -103,7 +102,7 @@ function AddItemForm({ onNewItem }) {
             variant="success"
             disabled={!newItem.length}
             className={submitting ? 'disabled' : ''}>
-            {submitting ? 'Adding...' : 'Add Item'}
+            {submitting ? 'Adding...' : 'Add'}
           </Button>
         </InputGroup.Append>
       </InputGroup>
